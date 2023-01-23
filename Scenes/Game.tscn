@@ -17,7 +17,7 @@ shader = SubResource("2")
 shader_parameter/cam_offset = Vector2(0, 0)
 
 [sub_resource type="CircleShape2D" id="1"]
-radius = 53.0848
+radius = 61.5224
 
 [node name="Game" type="Node2D"]
 texture_filter = 1
