@@ -2,12 +2,11 @@ extends MoveState
 
 func enter() -> void:
 	super.enter()
-	
-	player.animations.playback_speed = 2
+	player.currentState("sprint_state")
+	player.animations.playback_speed = 1.5
 
 func exit() -> void:
 	super.exit()
-	
 	player.animations.playback_speed = 1
 
 # Override MoveState input() since we don't want to change states based checked player input

@@ -2,7 +2,7 @@ extends MoveState
 
 func enter() -> void:
 	super.enter()
-	
+	player.currentState("walk_state")
 	player.animations.playback_speed = 1
 
 func input(event: InputEvent) -> BaseState:
@@ -12,6 +12,6 @@ func input(event: InputEvent) -> BaseState:
 	if new_state:
 		return new_state
 	
-	if Input.is_action_just_pressed("sprint"):
+	if Input.is_action_pressed("sprint"):
 		return sprint_state
 	return null

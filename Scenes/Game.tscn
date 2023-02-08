@@ -45,3 +45,31 @@ position = Vector2(960, 540)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/MouseDetection"]
 shape = SubResource("1")
+
+[node name="DebugMenu" type="Node2D" parent="SubViewportContainer"]
+
+[node name="PanelContainer" type="PanelContainer" parent="SubViewportContainer/DebugMenu"]
+offset_right = 280.0
+offset_bottom = 240.0
+
+[node name="MarginContainer" type="MarginContainer" parent="SubViewportContainer/DebugMenu/PanelContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SubViewportContainer/DebugMenu/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="State" type="Label" parent="SubViewportContainer/DebugMenu/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "State_null"
+
+[node name="Health" type="Label" parent="SubViewportContainer/DebugMenu/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Health: 0/0"
+
+[node name="Stamina" type="Label" parent="SubViewportContainer/DebugMenu/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Stamina: 0/0"
+
+[node name="Nutrition" type="Label" parent="SubViewportContainer/DebugMenu/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Nutrients: 0/0"

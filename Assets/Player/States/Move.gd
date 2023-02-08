@@ -19,7 +19,6 @@ extends BaseState
 var directions = ["walk_right", "walk_right_diagonal_down", "walk_down", "walk_left_diagonal_down", "walk_left", "walk_left_diagonal_up", "walk_up", "walk_right_diagonal_up"]
 var idle_directions = ["right", "right_diagonal_down", "down", "left_diagonal_down", "left", "left_diagonal_up", "up", "right_diagonal_up"]
 var roll_directions = ["roll_right", "roll_right_diagonal_down", "roll_down", "roll_left_diagonal_down", "roll_left", "roll_left_diagonal_up", "roll_up", "roll_right_diagonal_up"]
-var vector_directions = PackedVector2Array([Vector2(1,0), Vector2(1,1), Vector2(0,1), Vector2(-1,1), Vector2(-1,0), Vector2(-1,-1), Vector2(0,-1), Vector2(1,-1)])
 var move = Vector2()
 var facing = Vector2()
 var is_rolling = false
@@ -44,7 +43,7 @@ func physics_process(_delta: float) -> BaseState:
 	player.move_and_slide()
 	player.velocity = player.velocity
 	
-	if move == Vector2.ZERO:
+	if move == Vector2.ZERO && is_rolling == false:
 		return idle_state
 	return null
 
@@ -70,14 +69,6 @@ func direction2str(direction):
 	if move.x == 0 and move.y == 0:
 		return idle_directions[index]
 	elif is_rolling:
-		return roll_directions[index]
+		return idle_directions[index] #roll_directions[index]
 	else:
 		return directions[index]
-
-func str2direction(direction):
-	var index = 1
-	for i in idle_directions:
-		if i in direction:
-			return vector_directions[index]
-		else:
-			index += 1

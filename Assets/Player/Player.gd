@@ -8,13 +8,21 @@ extends CharacterBody2D
 var mouse_is_close = true
 var mouse_lerp_size = Vector2.ZERO
 
+signal updateState
+signal updateHealth
+signal updateStamina
+signal updateNutrition
+
 @onready var animations = $AnimationPlayer
 @onready var states = $State_Manager
+@onready var stats = $Player_Stats_Manager
 
 func _ready() -> void:
 	# Initialize the state machine, passing a reference of the player to the states
 	# that way they can move and react accordingly
 	states.init(self)
+	stats.init(self)
+	emit_signal("initStats", )
 	mouse_is_close = false
 	mouse_lerp_size = get_viewport().size
 
@@ -28,7 +36,6 @@ func _physics_process(delta: float) -> void:
 		$Camera2D.position = lerp(Vector2(), mouse_offset.normalized() * offset_normalize, mouse_offset.length() / camera_lerp_magnitude)
 
 func _process(delta: float) -> void:
-	$Label.set_text(str(states.current_state))
 	states.process(delta)
 
 func _mouse_entered():
@@ -38,3 +45,6 @@ func _mouse_entered():
 
 func _mouse_exited():
 	mouse_is_close = false
+
+func currentState(state):
+	emit_signal("updateState", state)

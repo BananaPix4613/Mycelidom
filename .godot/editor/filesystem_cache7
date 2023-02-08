@@ -1,30 +1,35 @@
 0b7126e0c6e86d3ec295a72f5aa6e0bd
-::res://::1674487804
+::res://::1675821745
 default_env.tres::Environment::-1::1674417593::0::1::::<><>::
 icon.png::CompressedTexture2D::5766308796080285377::1674417593::1674417710::1::::<><>::
-::res://Assets/::1674487804
+::res://Assets/::1675818122
 mosspeat_tilemapl.png::CompressedTexture2D::6942915463679014532::1674487800::1674487804::1::::<><>::
-TX Tileset Grass.png::CompressedTexture2D::7117985224634635706::1674417593::1674417710::1::::<><>::
-TX Tileset Wall.png::CompressedTexture2D::6528440061504405825::1674417593::1674417710::1::::<><>::
-::res://Assets/Player/::1674487683
+::res://Assets/Managers/::1675821745
+State_Manager.gd::GDScript::-1::1675489114::0::1::::<>Node<>::
+State_Manager.tscn::PackedScene::2697434677903558746::1675818922::0::1::::<><>::res://Assets/Managers/State_Manager.gd
+::res://Assets/Player/::1675819908
+Health.gd::GDScript::-1::1675651597::0::1::::<>DefaultStat<>::
 Mushling Sprite Sheet.png::CompressedTexture2D::2463145477814681150::1674417593::1674417710::1::::<><>::
 Mushling_Sprite_Sheet_Final.png::CompressedTexture2D::650779395845747782::1674417593::1674417710::1::::<><>::
-Player.gd::GDScript::-1::1674427368::0::1::::Player<>CharacterBody2D<>::
-Player.tscn::PackedScene::1085442796524038605::1674487683::0::1::::<><>::res://Assets/Player/States/State_Manager.tscn<>res://Assets/Player/States/Idle.gd<>uid://jjiihiwbs74m<>res://Assets/Player/Player.gd<>res://Assets/Player/States/Walk.gd<>res://Assets/Player/States/Sprint.gd<>res://Assets/Player/States/Block.gd<>res://Assets/Player/States/Attack.gd<>res://Assets/Player/States/Roll.gd
-::res://Assets/Player/States/::1674417593
+Nutrition.gd::GDScript::-1::1675490412::0::1::::<>DefaultStat<>::
+Player.gd::GDScript::-1::1675818866::0::1::::Player<>CharacterBody2D<>::
+Player.tscn::PackedScene::1923616327939923086::1675819908::0::1::::<><>::res://Assets/Player/States/Idle.gd<>uid://jjiihiwbs74m<>uid://bxq6nwx5xd6ur<>res://Assets/Player/Player.gd<>res://Assets/Player/Health.gd<>res://Assets/Player/States/Walk.gd<>res://Assets/Player/Stamina.gd<>res://Assets/Player/States/Sprint.gd<>res://Assets/Player/Nutrition.gd<>res://Assets/Player/States/Block.gd<>uid://beowmcoxlcnd7<>res://Assets/Player/States/Attack.gd<>res://Assets/Player/States/Roll.gd
+Stamina.gd::GDScript::-1::1675490412::0::1::::<>DefaultStat<>::
+::res://Assets/Player/States/::1675818922
 Attack.gd::GDScript::-1::1674417593::0::1::::<>BaseState<>::
-Base_State.gd::GDScript::-1::1674417593::0::1::::BaseState<>Node<>::
+Base_State.gd::GDScript::-1::1674790013::0::1::::BaseState<>Node<>::
 Block.gd::GDScript::-1::1674417593::0::1::::<>BaseState<>::
-Idle.gd::GDScript::-1::1674417593::0::1::::<>BaseState<>::
-Move.gd::GDScript::-1::1674417593::0::1::::MoveState<>BaseState<>::
-Roll.gd::GDScript::-1::1674417593::0::1::::<>MoveState<>::
-Sprint.gd::GDScript::-1::1674417593::0::1::::<>MoveState<>::
-State_Manager.gd::GDScript::-1::1674417593::0::1::::<>Node<>::
-State_Manager.tscn::PackedScene::-1::1674417593::0::1::::<><>::res://Assets/Player/States/State_Manager.gd
-Walk.gd::GDScript::-1::1674417593::0::1::::<>MoveState<>::
+Idle.gd::GDScript::-1::1674790088::0::1::::<>BaseState<>::
+Move.gd::GDScript::-1::1674610785::0::1::::MoveState<>BaseState<>::
+Roll.gd::GDScript::-1::1675818922::0::1::::<>MoveState<>::
+Sprint.gd::GDScript::-1::1674790088::0::1::::<>MoveState<>::
+Walk.gd::GDScript::-1::1674790088::0::1::::<>MoveState<>::
+::res://Assets/Player/Stats/::1675821745
+Default_Stat.gd::GDScript::-1::1675490412::0::1::::DefaultStat<>Node<>::
+Stats_Manager.gd::GDScript::-1::1675817674::0::1::::<>Node<>::
 ::res://Assets/User Interface/::1674417710
 Curser.png::CompressedTexture2D::8591426439110597258::1674417593::1674417710::1::::<><>::
-::res://Scenes/::1674487683
-Game.tscn::PackedScene::2406578324857204556::1674487683::0::1::::<><>::uid://dvld48ki8j32u<>res://Scenes/UIManger.gd
-Scene.tscn::PackedScene::8656171610900750578::1674487683::0::1::::<><>::uid://pp2c4oj2syw8<>uid://c8oagai8lpeog
-UIManger.gd::GDScript::-1::1674417593::0::1::::<>SubViewportContainer<>::
+::res://Scenes/::1675820251
+Game.tscn::PackedScene::2406578324857204556::1675820251::0::1::::<><>::uid://dvld48ki8j32u<>res://Scenes/UIManger.gd
+Scene.tscn::PackedScene::8656171610900750578::1675818922::0::1::::<><>::uid://2n2xd65r0mhy<>uid://c56g2kvpu8gs7
+UIManger.gd::GDScript::-1::1675820251::0::1::::<>SubViewportContainer<>::

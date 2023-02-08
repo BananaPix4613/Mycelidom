@@ -7,7 +7,7 @@ var current_state: BaseState
 func change_state(new_state: BaseState) -> void:
 	if current_state:
 		current_state.exit()
-
+	
 	current_state = new_state
 	current_state.enter()
 
@@ -17,10 +17,10 @@ func change_state(new_state: BaseState) -> void:
 func init(player: Player) -> void:
 	for child in get_children():
 		child.player = player
-
+	
 	# Initialize with a default state of idle
 	change_state(get_node(starting_state))
-	
+
 # Pass through functions for the Player to call,
 # handling state changes as needed
 func physics_process(delta: float) -> void:

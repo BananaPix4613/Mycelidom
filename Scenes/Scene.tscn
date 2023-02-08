@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dvld48ki8j32u"]
 
-[ext_resource type="PackedScene" uid="uid://pp2c4oj2syw8" path="res://Assets/Player/Player.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://2n2xd65r0mhy" path="res://Assets/Player/Player.tscn" id="1"]
 [ext_resource type="Texture2D" uid="uid://c56g2kvpu8gs7" path="res://Assets/mosspeat_tilemapl.png" id="1_kbprs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q45bb"]

@@ -1,3 +1,11 @@
-res://Scenes/Game.tscn
-res://Scenes/Scene.tscn
 res://Assets/Player/Player.tscn
+res://Scenes/Scene.tscn
+res://Scenes/Game.tscn
+res://Assets/Managers/State_Manager.tscn
+res://Assets/Managers/Stats_Manager.tscn
+res://Assets/Player/Player.gd
+res://Assets/Player/States/Roll.gd
+res://Scenes/UIManger.gd
+res://Assets/Player/Stats/Player_Stats_Manager.gd
+res://Assets/Player/Health.gd
+res://Assets/Player/Stamina.gd

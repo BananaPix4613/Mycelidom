@@ -1,33 +1,57 @@
 extends MoveState
 
-@export var dash_time = 0.4
+@export var roll_time = 0.4
 
-var current_dash_time: float = 0
-var dash_direction = Vector2.ZERO
+var current_roll_time: float = 0
+var roll_direction = Vector2()
 
 func enter() -> void:
 	super.enter()
-	
-	current_dash_time = dash_time
-	
-	dash_direction = facing
+	player.currentState("roll_state")
+	current_roll_time = roll_time
+	roll_direction = int2direction(directions.find(player.animations.get_current_animation()) + 1)
+	is_rolling = true
+
+func exit() -> void:
+	super.exit()
+	is_rolling = false
 
 # Override MoveState input() since we don't want to change states based checked player input
 func input(_event: InputEvent) -> BaseState:
 	return null
 
 func get_movement_input() -> Vector2:
-	return dash_direction
+	if roll_direction:
+		return roll_direction
+	return Vector2.ZERO
 
 # Track how long we've been dashing so we know when to exit
 func process(delta: float) -> BaseState:
-	current_dash_time -= delta
+	current_roll_time -= delta
 	
-	if current_dash_time > 0:
+	if current_roll_time > 0:
 		return null
-	
-	if Input.is_action_just_pressed("move_left") or Input.is_action_just_pressed("move_right") or Input.is_action_just_pressed("move_up") or Input.is_action_just_pressed("move_down"):
+	elif Input.is_action_pressed("move_left") or Input.is_action_pressed("move_right") or Input.is_action_pressed("move_up") or Input.is_action_pressed("move_down"):
 		if Input.is_action_pressed("sprint"):
 			return sprint_state
 		return walk_state
 	return idle_state
+
+func int2direction(num):
+	match num:
+		1:
+			return Vector2(1,0)
+		2:
+			return Vector2(1,1)
+		3:
+			return Vector2(0,1)
+		4:
+			return Vector2(-1,1)
+		5:
+			return Vector2(-1,0)
+		6:
+			return Vector2(-1,-1)
+		7:
+			return Vector2(0,-1)
+		8:
+			return Vector2(1,-1)
