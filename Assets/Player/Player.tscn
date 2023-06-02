@@ -1,25 +1,24 @@
-[gd_scene load_steps=33 format=3 uid="uid://2n2xd65r0mhy"]
+[gd_scene load_steps=31 format=3 uid="uid://2n2xd65r0mhy"]
 
 [ext_resource type="Script" path="res://Assets/Player/States/Idle.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://jjiihiwbs74m" path="res://Assets/Player/Mushling_Sprite_Sheet_Final.png" id="3"]
-[ext_resource type="Script" path="res://Assets/Player/Stats/Player_Stats_Manager.gd" id="3_i83nc"]
 [ext_resource type="Script" path="res://Assets/Player/Player.gd" id="4"]
-[ext_resource type="Script" path="res://Assets/Player/Health.gd" id="4_k8v01"]
 [ext_resource type="Script" path="res://Assets/Player/States/Walk.gd" id="5"]
-[ext_resource type="Script" path="res://Assets/Player/Stamina.gd" id="5_62n0e"]
 [ext_resource type="Script" path="res://Assets/Player/States/Sprint.gd" id="6"]
-[ext_resource type="Script" path="res://Assets/Player/Nutrition.gd" id="6_7fhl5"]
 [ext_resource type="Script" path="res://Assets/Player/States/Block.gd" id="7"]
-[ext_resource type="PackedScene" uid="uid://beowmcoxlcnd7" path="res://Assets/Managers/State_Manager.tscn" id="7_4ks87"]
+[ext_resource type="PackedScene" uid="uid://beowmcoxlcnd7" path="res://Assets/States/State_Manager.tscn" id="7_4ks87"]
 [ext_resource type="Script" path="res://Assets/Player/States/Attack.gd" id="8"]
 [ext_resource type="Script" path="res://Assets/Player/States/Roll.gd" id="9"]
+[ext_resource type="PackedScene" uid="uid://ca0uwc5w0f4bf" path="res://Assets/Stats/Stat_Manager.tscn" id="10_0earn"]
+[ext_resource type="Script" path="res://Assets/Stats/Stat.gd" id="11_65go8"]
+[ext_resource type="PackedScene" uid="uid://dhng4wih5qkk8" path="res://Assets/Entities/world_collision.tscn" id="11_cd1rk"]
 
 [sub_resource type="Animation" id="42"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Character:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -35,7 +34,7 @@ length = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Character:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -51,7 +50,7 @@ length = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Character:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -67,7 +66,7 @@ length = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Character:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -83,7 +82,7 @@ length = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Character:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -99,7 +98,7 @@ length = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Character:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -115,7 +114,7 @@ length = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Character:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -131,7 +130,7 @@ length = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Character:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -147,7 +146,7 @@ length = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Character:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -163,7 +162,7 @@ length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Character:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -179,7 +178,7 @@ length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Character:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -195,7 +194,7 @@ length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Character:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -211,7 +210,7 @@ length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Character:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -227,7 +226,7 @@ length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Character:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -243,7 +242,7 @@ length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Character:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -259,7 +258,7 @@ length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Character:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -275,7 +274,7 @@ length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Character:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -306,47 +305,28 @@ _data = {
 "walk_up": SubResource("51")
 }
 
-[sub_resource type="RectangleShape2D" id="1"]
-size = Vector2(8, 12)
-
 [node name="Player" type="CharacterBody2D"]
 texture_filter = 1
 script = ExtResource("4")
 offset_normalize = 400
+animations_node = NodePath("Player_Animations")
+states_node = NodePath("State_Manager")
+stats_node = NodePath("Stat_Manager")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
+[node name="Camera" type="Camera2D" parent="."]
 zoom = Vector2(0.8, 0.8)
 position_smoothing_enabled = true
 position_smoothing_speed = 6.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="Player_Animations" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_t4q3y")
 }
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Character" type="Sprite2D" parent="."]
 texture = ExtResource("3")
 hframes = 4
 vframes = 8
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("1")
-
-[node name="Player_Stats_Manager" type="Node" parent="."]
-script = ExtResource("3_i83nc")
-health_node = NodePath("health")
-stamina_node = NodePath("stamina")
-nutrition_node = NodePath("nutrition")
-
-[node name="health" type="Node" parent="Player_Stats_Manager"]
-script = ExtResource("4_k8v01")
-
-[node name="stamina" type="Node" parent="Player_Stats_Manager"]
-script = ExtResource("5_62n0e")
-
-[node name="nutrition" type="Node" parent="Player_Stats_Manager"]
-script = ExtResource("6_7fhl5")
 
 [node name="State_Manager" parent="." instance=ExtResource("7_4ks87")]
 starting_state = NodePath("idle")
@@ -371,7 +351,6 @@ roll_node = NodePath("../roll")
 
 [node name="sprint" type="Node" parent="State_Manager"]
 script = ExtResource("6")
-move_speed = 150.0
 idle_node = NodePath("../idle")
 sprint_node = NodePath(".")
 walk_node = NodePath("../walk")
@@ -398,6 +377,7 @@ roll_node = NodePath("../roll")
 [node name="roll" type="Node" parent="State_Manager"]
 script = ExtResource("9")
 roll_time = 0.2
+roll_cooldown_node = NodePath("Roll_Cooldown")
 move_speed = 200.0
 idle_node = NodePath("../idle")
 sprint_node = NodePath("../sprint")
@@ -406,9 +386,24 @@ block_node = NodePath("../block")
 attack_node = NodePath("../attack")
 roll_node = NodePath(".")
 
-[node name="BlockingArea" type="Node2D" parent="."]
+[node name="Roll_Cooldown" type="Timer" parent="State_Manager/roll"]
+one_shot = true
 
-[node name="Area2D" type="Area2D" parent="BlockingArea"]
+[node name="Stat_Manager" parent="." instance=ExtResource("10_0earn")]
+Nodepaths = Array[NodePath]([NodePath("Health"), NodePath("Stamina"), NodePath("Nutrients")])
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BlockingArea/Area2D"]
-position = Vector2(0, -24)
+[node name="Health" type="Node" parent="Stat_Manager"]
+script = ExtResource("11_65go8")
+stat_name = "health"
+
+[node name="Stamina" type="Node" parent="Stat_Manager"]
+script = ExtResource("11_65go8")
+stat_name = "stamina"
+
+[node name="Nutrients" type="Node" parent="Stat_Manager"]
+script = ExtResource("11_65go8")
+stat_name = "nutrients"
+
+[node name="World_Collision" parent="." instance=ExtResource("11_cd1rk")]
+
+[editable path="World_Collision"]

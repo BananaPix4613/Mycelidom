@@ -3,7 +3,7 @@ extends MoveState
 func enter() -> void:
 	super.enter()
 	player.currentState("walk_state")
-	player.animations.playback_speed = 1
+	player.animations.speed_scale = 1
 
 func input(event: InputEvent) -> BaseState:
 	# First run parent code and make sure we don't need to exit early

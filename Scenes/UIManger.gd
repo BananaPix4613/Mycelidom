@@ -20,7 +20,7 @@ func _ready():
 	player.connect("updateNutrition", Callable(self, "updateNutrition"))
 	
 	# DEBUG initializers
-	player.connect("initStats", Callable(self, "initStats"))
+	#player.connect("initStats", Callable(self, "initStats"))
 
 func updateState(state):
 	state_label.text = state

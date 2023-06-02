@@ -1,6 +1,12 @@
 extends MoveState
 
 @export var roll_time = 0.4
+@export var cooldown = 1;
+
+# State nodes
+@export_node_path("Node") var roll_cooldown_node
+
+@onready var roll_cooldown: Timer = get_node(roll_cooldown_node)
 
 var current_roll_time: float = 0
 var roll_direction = Vector2()
@@ -8,12 +14,14 @@ var roll_direction = Vector2()
 func enter() -> void:
 	super.enter()
 	player.currentState("roll_state")
+	roll_cooldown.wait_time = cooldown
 	current_roll_time = roll_time
 	roll_direction = int2direction(directions.find(player.animations.get_current_animation()) + 1)
 	is_rolling = true
 
 func exit() -> void:
 	super.exit()
+	roll_cooldown.start()
 	is_rolling = false
 
 # Override MoveState input() since we don't want to change states based checked player input

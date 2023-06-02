@@ -1,10 +1,11 @@
 extends BaseState
 
-@export_node_path(Node) var walk_node
-@export_node_path(Node) var sprint_node
-@export_node_path(Node) var block_node
-@export_node_path(Node) var idle_node
-@export_node_path(Node) var roll_node
+# State nodes
+@export_node_path("Node") var walk_node
+@export_node_path("Node") var sprint_node
+@export_node_path("Node") var block_node
+@export_node_path("Node") var idle_node
+@export_node_path("Node") var roll_node
 
 @onready var walk_state: BaseState = get_node(walk_node)
 @onready var sprint_state: BaseState = get_node(sprint_node)

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5godhgbfceld"]
+
+[ext_resource type="Script" path="res://Assets/Entities/Entity/Entity.gd" id="1_pi6t8"]
+[ext_resource type="PackedScene" uid="uid://beowmcoxlcnd7" path="res://Assets/States/State_Manager.tscn" id="2_b4rly"]
+[ext_resource type="PackedScene" uid="uid://ca0uwc5w0f4bf" path="res://Assets/Stats/Stat_Manager.tscn" id="3_kom7k"]
+
+[node name="Entity" type="CharacterBody2D"]
+script = ExtResource("1_pi6t8")
+animations_node = NodePath("Entity_Animations")
+states_node = NodePath("Entity_State_Manager")
+stats_node = NodePath("Stat_Manager")
+
+[node name="Entity_Animations" type="AnimationPlayer" parent="."]
+
+[node name="Character" type="Sprite2D" parent="."]
+
+[node name="Entity_State_Manager" parent="." instance=ExtResource("2_b4rly")]
+
+[node name="Stat_Manager" parent="." instance=ExtResource("3_kom7k")]

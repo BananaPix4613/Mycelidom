@@ -3,6 +3,7 @@ extends Node
 
 # Pass in a reference to the player's kinematic body so that it can be only used by the state
 var player: Player
+var entity: Entity
 
 func enter() -> void:
 	pass

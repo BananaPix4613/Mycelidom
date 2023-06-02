@@ -1,13 +1,14 @@
 class_name MoveState
 extends BaseState
 
+# State nodes
 @export var move_speed = 120.0
-@export_node_path(Node) var idle_node
-@export_node_path(Node) var sprint_node
-@export_node_path(Node) var walk_node
-@export_node_path(Node) var block_node
-@export_node_path(Node) var attack_node
-@export_node_path(Node) var roll_node
+@export_node_path("Node") var idle_node
+@export_node_path("Node") var sprint_node
+@export_node_path("Node") var walk_node
+@export_node_path("Node") var block_node
+@export_node_path("Node") var attack_node
+@export_node_path("Node") var roll_node
 
 @onready var idle_state: BaseState = get_node(idle_node)
 @onready var sprint_state: BaseState = get_node(sprint_node)
@@ -25,7 +26,8 @@ var is_rolling = false
 
 func input(_event: InputEvent) -> BaseState:
 	if Input.is_action_just_pressed("roll"):
-		return roll_state
+		if roll_state.roll_cooldown.time_left == 0:
+			return roll_state
 	
 	return null
 
