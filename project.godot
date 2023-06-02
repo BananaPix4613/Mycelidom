@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="TopdownGame"
-run/main_scene="res://Scenes/Game.tscn"
+run/main_scene="res://Scenes/UI.tscn"
 config/features=PackedStringArray("4.0")
 config/icon="res://icon.png"
 

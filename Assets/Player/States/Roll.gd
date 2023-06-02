@@ -3,10 +3,12 @@ extends MoveState
 @export var roll_time = 0.4
 @export var cooldown = 1;
 
-# State nodes
+
+# Node References
 @export_node_path("Node") var roll_cooldown_node
 
 @onready var roll_cooldown: Timer = get_node(roll_cooldown_node)
+
 
 var current_roll_time: float = 0
 var roll_direction = Vector2()

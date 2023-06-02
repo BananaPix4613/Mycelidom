@@ -1,6 +1,7 @@
 extends BaseState
 
-# State nodes
+
+# Node References
 @export_node_path("Node") var walk_node
 @export_node_path("Node") var sprint_node
 @export_node_path("Node") var idle_node
@@ -13,6 +14,7 @@ extends BaseState
 @onready var attack_state: BaseState = get_node(attack_node)
 @onready var roll_state: BaseState = get_node(roll_node)
 
+
 # Override MoveState input() since we don't want to change states based checked player input
 func input(event: InputEvent) -> BaseState:
 	# First run parent code and make sure we don't need to exit early
@@ -24,6 +26,8 @@ func input(event: InputEvent) -> BaseState:
 	if Input.is_action_just_released("sprint"):
 		return walk_state
 	return null
+
+#func process(delta):
 
 #func _draw():
 #	var center = Vector2(0, 1)

@@ -1,11 +1,14 @@
 extends SubViewportContainer
 
+
+# Node References
 @onready var player = $SubViewport/Scene/Player
 @onready var mouse_detector = $MouseDetection
 @onready var state_label = $DebugMenu/PanelContainer/MarginContainer/VBoxContainer/State
 @onready var health_label = $DebugMenu/PanelContainer/MarginContainer/VBoxContainer/Health
 @onready var stamina_label = $DebugMenu/PanelContainer/MarginContainer/VBoxContainer/Stamina
 @onready var nutrition_label = $DebugMenu/PanelContainer/MarginContainer/VBoxContainer/Nutrition
+
 
 func _ready():
 	

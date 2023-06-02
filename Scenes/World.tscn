@@ -342,7 +342,7 @@ terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.686275, 0.14902, 0.168627, 1)
 sources/0 = SubResource("TileSetAtlasSource_q45bb")
 
-[node name="Scene" type="Node2D"]
+[node name="World" type="Node2D"]
 texture_filter = 1
 
 [node name="TileMap" type="TileMap" parent="."]

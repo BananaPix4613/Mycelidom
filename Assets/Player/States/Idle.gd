@@ -1,6 +1,7 @@
 extends BaseState
 
-# State nodes
+
+# Node References
 @export_node_path("Node") var walk_node
 @export_node_path("Node") var sprint_node
 @export_node_path("Node") var block_node
@@ -12,6 +13,7 @@ extends BaseState
 @onready var block_state: BaseState = get_node(block_node)
 @onready var attack_state: BaseState = get_node(attack_node)
 @onready var roll_state: BaseState = get_node(roll_node)
+
 
 func enter() -> void:
 	super.enter()

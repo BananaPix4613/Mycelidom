@@ -1,11 +1,2 @@
-res://Scenes/Scene.tscn
-res://Scenes/Game.tscn
-res://Assets/Player/Player.tscn
-res://Assets/States/State_Manager.tscn
-res://Assets/Stats/Stat_Manager.tscn
-res://Assets/Entities/Entity/Entity.tscn
-res://Assets/Stats/Stats_Manager.gd
+res://Scenes/World.tscn
 res://Assets/Player/States/Block.gd
-res://Assets/Player/States/Sprint.gd
-res://Assets/Player/States/Walk.gd
-res://Assets/Player/Player.gd

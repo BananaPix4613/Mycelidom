@@ -1,7 +1,8 @@
 class_name MoveState
 extends BaseState
 
-# State nodes
+
+# Node References
 @export var move_speed = 120.0
 @export_node_path("Node") var idle_node
 @export_node_path("Node") var sprint_node
@@ -17,9 +18,12 @@ extends BaseState
 @onready var attack_state: BaseState = get_node(attack_node)
 @onready var roll_state: BaseState = get_node(roll_node)
 
+
+# Preset directions for animations
 var directions = ["walk_right", "walk_right_diagonal_down", "walk_down", "walk_left_diagonal_down", "walk_left", "walk_left_diagonal_up", "walk_up", "walk_right_diagonal_up"]
 var idle_directions = ["right", "right_diagonal_down", "down", "left_diagonal_down", "left", "left_diagonal_up", "up", "right_diagonal_up"]
 var roll_directions = ["roll_right", "roll_right_diagonal_down", "roll_down", "roll_left_diagonal_down", "roll_left", "roll_left_diagonal_up", "roll_up", "roll_right_diagonal_up"]
+
 var move = Vector2()
 var facing = Vector2()
 var is_rolling = false

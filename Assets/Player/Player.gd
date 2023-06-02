@@ -4,6 +4,8 @@ extends CharacterBody2D
 @export var camera_lerp_magnitude = 1000
 @export var offset_normalize = 350
 
+
+# Node References
 @export_node_path("Node") var animations_node
 @export_node_path("Node") var states_node
 @export_node_path("Node") var stats_node
@@ -11,6 +13,7 @@ extends CharacterBody2D
 @onready var animations = get_node(animations_node)
 @onready var states = get_node(states_node)
 @onready var stats = get_node(stats_node)
+
 
 var mouse_is_close = true
 var mouse_lerp_size = Vector2.ZERO
