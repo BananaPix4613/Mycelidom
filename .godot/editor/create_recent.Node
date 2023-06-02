@@ -1,0 +1,15 @@
+Timer
+Node
+Area2D
+Node2D
+Sprite2D
+AnimationPlayer
+CharacterBody2D
+MarginContainer
+VBoxContainer
+Label
+PanelContainer
+Panel
+HBoxContainer
+Container
+ColorRect

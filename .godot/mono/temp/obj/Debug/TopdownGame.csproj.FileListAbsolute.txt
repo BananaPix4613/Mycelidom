@@ -1,0 +1,17 @@
+C:\Users\jwood\OneDrive\Documents\GitHub\Mycelidom-godot-4.0-beta13\.godot\mono\temp\bin\Debug\TopdownGame.deps.json
+C:\Users\jwood\OneDrive\Documents\GitHub\Mycelidom-godot-4.0-beta13\.godot\mono\temp\bin\Debug\TopdownGame.runtimeconfig.json
+C:\Users\jwood\OneDrive\Documents\GitHub\Mycelidom-godot-4.0-beta13\.godot\mono\temp\bin\Debug\TopdownGame.dll
+C:\Users\jwood\OneDrive\Documents\GitHub\Mycelidom-godot-4.0-beta13\.godot\mono\temp\bin\Debug\TopdownGame.pdb
+C:\Users\jwood\OneDrive\Documents\GitHub\Mycelidom-godot-4.0-beta13\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\jwood\OneDrive\Documents\GitHub\Mycelidom-godot-4.0-beta13\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\jwood\OneDrive\Documents\GitHub\Mycelidom-godot-4.0-beta13\.godot\mono\temp\obj\Debug\TopdownGame.csproj.AssemblyReference.cache
+C:\Users\jwood\OneDrive\Documents\GitHub\Mycelidom-godot-4.0-beta13\.godot\mono\temp\obj\Debug\TopdownGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jwood\OneDrive\Documents\GitHub\Mycelidom-godot-4.0-beta13\.godot\mono\temp\obj\Debug\TopdownGame.AssemblyInfoInputs.cache
+C:\Users\jwood\OneDrive\Documents\GitHub\Mycelidom-godot-4.0-beta13\.godot\mono\temp\obj\Debug\TopdownGame.AssemblyInfo.cs
+C:\Users\jwood\OneDrive\Documents\GitHub\Mycelidom-godot-4.0-beta13\.godot\mono\temp\obj\Debug\TopdownGame.csproj.CoreCompileInputs.cache
+C:\Users\jwood\OneDrive\Documents\GitHub\Mycelidom-godot-4.0-beta13\.godot\mono\temp\obj\Debug\TopdownGame.csproj.CopyComplete
+C:\Users\jwood\OneDrive\Documents\GitHub\Mycelidom-godot-4.0-beta13\.godot\mono\temp\obj\Debug\TopdownGame.dll
+C:\Users\jwood\OneDrive\Documents\GitHub\Mycelidom-godot-4.0-beta13\.godot\mono\temp\obj\Debug\refint\TopdownGame.dll
+C:\Users\jwood\OneDrive\Documents\GitHub\Mycelidom-godot-4.0-beta13\.godot\mono\temp\obj\Debug\TopdownGame.pdb
+C:\Users\jwood\OneDrive\Documents\GitHub\Mycelidom-godot-4.0-beta13\.godot\mono\temp\obj\Debug\TopdownGame.genruntimeconfig.cache
+C:\Users\jwood\OneDrive\Documents\GitHub\Mycelidom-godot-4.0-beta13\.godot\mono\temp\obj\Debug\ref\TopdownGame.dll
