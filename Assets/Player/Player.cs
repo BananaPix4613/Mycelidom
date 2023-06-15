@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Player: Node 
+public partial class Player: CharacterBody2D 
 {
     [Export]
     float cameraLerpMagnitude = 1000f;
@@ -57,9 +57,7 @@ public partial class Player: Node
         if (!mouseIsClose)
         {
             var mouseOffset = GetViewport().GetMousePosition() - (mouseLerpSize / 8);
-            var x = Mathf.Lerp(0f, mouseOffset.Normalized().X * offsetNormalize, mouseOffset.X / cameraLerpMagnitude);
-            var y = Mathf.Lerp(0f, mouseOffset.Normalized().Y * offsetNormalize, mouseOffset.Y / cameraLerpMagnitude);
-            Camera.Position = new Vector2(x, y);
+            Camera.Position = new Vector2().Lerp(mouseOffset.Normalized() * offsetNormalize, mouseOffset.Length() / cameraLerpMagnitude);
         }
     }
 
@@ -69,8 +67,22 @@ public partial class Player: Node
         States._Process(delta);
     }
 
+    public override void _MouseEnter()
+    {
+        base._MouseEnter();
+        mouseIsClose = true;
+        var mouseOffset = (GetViewport().GetMousePosition() - mouseLerpSize / 8);
+        Camera.Position = new Vector2().Lerp(Vector2.Zero, mouseOffset.Length() / cameraLerpMagnitude);
+    }
+
+    public override void _MouseExit()
+    {
+        base._MouseExit();
+        mouseIsClose = false;
+    }
+
     public void CurrentState(BaseState state)
     {
-        EmitSignal(SignalName.UpdateState, state);
+        EmitSignal("UpdateState", state);
     }
 }
