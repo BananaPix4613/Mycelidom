@@ -1,8 +1,8 @@
 [gd_scene load_steps=31 format=3 uid="uid://2n2xd65r0mhy"]
 
+[ext_resource type="Script" path="res://Assets/Player/Player.cs" id="1_i5jje"]
 [ext_resource type="Script" path="res://Assets/Player/States/Idle.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://jjiihiwbs74m" path="res://Assets/Player/Mushling_Sprite_Sheet_Final.png" id="3"]
-[ext_resource type="Script" path="res://Assets/Player/Player.gd" id="4"]
 [ext_resource type="Script" path="res://Assets/Player/States/Walk.gd" id="5"]
 [ext_resource type="Script" path="res://Assets/Player/States/Sprint.gd" id="6"]
 [ext_resource type="Script" path="res://Assets/Player/States/Block.gd" id="7"]
@@ -305,13 +305,13 @@ _data = {
 "walk_up": SubResource("51")
 }
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("Camera", "AnimationsNode", "States", "Stats")]
 texture_filter = 1
-script = ExtResource("4")
-offset_normalize = 400
-animations_node = NodePath("Player_Animations")
-states_node = NodePath("State_Manager")
-stats_node = NodePath("Stat_Manager")
+script = ExtResource("1_i5jje")
+Camera = NodePath("Camera")
+AnimationsNode = NodePath("Player_Animations")
+States = NodePath("State_Manager")
+Stats = NodePath("Stat_Manager")
 
 [node name="Camera" type="Camera2D" parent="."]
 zoom = Vector2(0.8, 0.8)
@@ -329,7 +329,6 @@ hframes = 4
 vframes = 8
 
 [node name="State_Manager" parent="." instance=ExtResource("7_4ks87")]
-starting_state = NodePath("idle")
 
 [node name="idle" type="Node" parent="State_Manager"]
 script = ExtResource("2")
@@ -390,7 +389,6 @@ roll_node = NodePath(".")
 one_shot = true
 
 [node name="Stat_Manager" parent="." instance=ExtResource("10_0earn")]
-Nodepaths = Array[NodePath]([NodePath("Health"), NodePath("Stamina"), NodePath("Nutrients")])
 
 [node name="Health" type="Node" parent="Stat_Manager"]
 script = ExtResource("11_65go8")

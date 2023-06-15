@@ -13,7 +13,7 @@ public partial class Player: CharacterBody2D
     Camera2D Camera { get; set; }
 
     [Export]
-    public AnimationNode AnimationsNode { get; set; }
+    public AnimationPlayer AnimationsNode { get; set; }
 
     [Export]
     public StateManager States { get; set; }
