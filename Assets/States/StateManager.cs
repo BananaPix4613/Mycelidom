@@ -39,7 +39,7 @@ public partial class StateManager : Node
 		ChangeState(StartingState);
 	}
 	
-	public void init(Entity entity)
+	public void Init(Entity entity)
 	{
 		foreach(BaseState child in GetChildren())
 		{
