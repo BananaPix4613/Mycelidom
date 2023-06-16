@@ -39,7 +39,7 @@ public partial class Player : CharacterBody2D
     public override void _Ready()
     {
         States.InitPlayer(this);
-        // Stats.InitPlayer(this);
+        Stats.InitPlayer(this);
         mouseIsClose = false;
         mouseLerpSize = GetViewport().GetVisibleRect().Size;
     }
@@ -52,7 +52,6 @@ public partial class Player : CharacterBody2D
 
     public override void _PhysicsProcess(double delta)
     {
-        base._PhysicsProcess(delta);
         States._PhysicsProcess(delta);
         if (!mouseIsClose)
         {
@@ -63,7 +62,6 @@ public partial class Player : CharacterBody2D
 
     public override void _Process(double delta)
     {
-        base._Process(delta);
         States._Process(delta);
     }
 
