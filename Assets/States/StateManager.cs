@@ -51,9 +51,7 @@ public partial class StateManager : Node
 
     public override void _Input(InputEvent @event)
     {
-        base._Input(@event);
-
-		CurrentState._Input(@event);
+        CurrentState._Input(@event);
 		if (CurrentState.NewState != null)
 		{
 			ChangeState(CurrentState.NewState);

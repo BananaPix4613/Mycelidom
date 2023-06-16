@@ -21,7 +21,10 @@ func enter() -> void:
 	player.velocity = Vector2.ZERO
 
 func input(_event: InputEvent) -> BaseState:
-	if Input.is_action_just_pressed("move_left") or Input.is_action_just_pressed("move_right") or Input.is_action_just_pressed("move_up") or Input.is_action_just_pressed("move_down"):
+	if Input.is_action_just_pressed("move_left") 
+		or Input.is_action_just_pressed("move_right") 
+		or Input.is_action_just_pressed("move_up") 
+		or Input.is_action_just_pressed("move_down"):
 		if Input.is_action_pressed("sprint"):
 			return sprint_state
 		return walk_state
