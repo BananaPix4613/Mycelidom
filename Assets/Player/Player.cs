@@ -10,7 +10,7 @@ public partial class Player : CharacterBody2D
     float offsetNormalize = 350f;
 
     [Export]
-    Camera2D Camera { get; set; }
+    public Camera2D Camera { get; set; }
 
     [Export]
     public AnimationPlayer Animations { get; set; }
