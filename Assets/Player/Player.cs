@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Player: CharacterBody2D 
+public partial class Player : CharacterBody2D
 {
     [Export]
     float cameraLerpMagnitude = 1000f;
@@ -13,7 +13,7 @@ public partial class Player: CharacterBody2D
     Camera2D Camera { get; set; }
 
     [Export]
-    public AnimationPlayer AnimationsNode { get; set; }
+    public AnimationPlayer Animations { get; set; }
 
     [Export]
     public StateManager States { get; set; }

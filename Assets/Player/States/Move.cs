@@ -7,25 +7,25 @@ public partial class Move : BaseState
     float moveSpeed = 120.0f;
 
     [Export]
-    Idle idle;
+    public Idle Idle { get; set; }
 
     [Export]
-    Sprint sprint;
+    public Sprint Sprint { get; set; }
 
     [Export]
-    Walk walk;
+    public Walk Walk { get; set; }
 
     [Export]
-    Block block;
+    public Block Block { get; set; }
 
     [Export]
-    Attack attack;
+    public Attack Attack { get; set; }
 
     [Export]
-    Roll roll;
+    public Roll Roll { get; set; }
 
-    string[] directions = 
-    {   
+    public string[] directions =
+    {
         "walk_right",
         "walk_right_diagonal_down",
         "walk_down",
@@ -36,8 +36,8 @@ public partial class Move : BaseState
         "walk_right_diagonal_up"
     };
 
-    string[] idleDirections = 
-    {   
+    public string[] idleDirections =
+    {
         "right",
         "right_diagonal_down",
         "down",
@@ -47,8 +47,9 @@ public partial class Move : BaseState
         "up",
         "right_diagonal_up"
     };
-    string[] rollDirections = 
-    {   
+
+    public string[] rollDirections =
+    {
         "roll_right",
         "roll_right_diagonal_down",
         "roll_down",
@@ -61,16 +62,17 @@ public partial class Move : BaseState
 
     Vector2 move;
     Vector2 facing;
-    bool isRolling = false;
+
+    public bool IsRolling { get; set; }
 
     public override void _Input(InputEvent @event)
     {
         if (Input.IsActionJustPressed("roll"))
         {
-            if (roll.RollCooldown.TimeLeft == 0)
+            if (Roll.RollCooldown.TimeLeft == 0)
             {
                 // State manager should be set to roll state
-                NewState = roll;
+                NewState = Roll;
             }
         }
     }
@@ -82,21 +84,21 @@ public partial class Move : BaseState
         var move = GetMovementInput();
 
         var animationIndex = GetDirectionIndex(facing);
-        var animation = isRolling || (move.X == 0 && move.Y == 0)? idleDirections[animationIndex] : directions[animationIndex];
-        if (Player.AnimationsNode.CurrentAnimation != animation)
-            Player.AnimationsNode.Play(animation);
+        var animation = IsRolling || (move.X == 0 && move.Y == 0) ? idleDirections[animationIndex] : directions[animationIndex];
+        if (Player.Animations.CurrentAnimation != animation)
+            Player.Animations.Play(animation);
 
         move = move.Normalized();
         Player.Velocity = new Vector2(move.X * moveSpeed, move.Y * moveSpeed);
         Player.MoveAndSlide();
-        
-        if (move == Vector2.Zero && !isRolling) 
+
+        if (move == Vector2.Zero && !IsRolling)
         {
-            NewState = idle;
+            NewState = Idle;
         }
     }
 
-    public Vector2 GetMovementInput()
+    public virtual Vector2 GetMovementInput()
     {
         var left = Input.IsActionPressed("move_left");
         var right = Input.IsActionPressed("move_right");
