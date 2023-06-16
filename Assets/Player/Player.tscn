@@ -331,20 +331,48 @@ vframes = 8
 [node name="State_Manager" parent="." node_paths=PackedStringArray("StartingState") instance=ExtResource("7_4ks87")]
 StartingState = NodePath("idle")
 
-[node name="idle" type="Node" parent="State_Manager"]
+[node name="idle" type="Node" parent="State_Manager" node_paths=PackedStringArray("walkState", "sprintState", "blockState", "attackState", "rollState", "idleState")]
 script = ExtResource("4_m0p3h")
+walkState = NodePath("../walk")
+sprintState = NodePath("../sprint")
+blockState = NodePath("../block")
+attackState = NodePath("../attack")
+rollState = NodePath("../roll")
+idleState = NodePath(".")
 
-[node name="walk" type="Node" parent="State_Manager"]
+[node name="walk" type="Node" parent="State_Manager" node_paths=PackedStringArray("Idle", "Sprint", "Walk", "Block", "Attack", "Roll")]
 script = ExtResource("5_e3iro")
+Idle = NodePath("../idle")
+Sprint = NodePath("../sprint")
+Walk = NodePath(".")
+Block = NodePath("../block")
+Attack = NodePath("../attack")
+Roll = NodePath("../roll")
 
-[node name="sprint" type="Node" parent="State_Manager"]
+[node name="sprint" type="Node" parent="State_Manager" node_paths=PackedStringArray("Idle", "Sprint", "Walk", "Block", "Attack", "Roll")]
 script = ExtResource("6_7l8iw")
+Idle = NodePath("../idle")
+Sprint = NodePath(".")
+Walk = NodePath("../walk")
+Block = NodePath("../block")
+Attack = NodePath("../attack")
+Roll = NodePath("../roll")
 
-[node name="block" type="Node" parent="State_Manager"]
+[node name="block" type="Node" parent="State_Manager" node_paths=PackedStringArray("walkState", "sprintstate", "idleState", "attackState", "rollState")]
 script = ExtResource("7_k2tna")
+walkState = NodePath("../walk")
+sprintstate = NodePath("../sprint")
+idleState = NodePath("../idle")
+attackState = NodePath("../attack")
+rollState = NodePath("../roll")
 
-[node name="attack" type="Node" parent="State_Manager"]
+[node name="attack" type="Node" parent="State_Manager" node_paths=PackedStringArray("WalkState", "SprintState", "BlockState", "IdleState", "RollState")]
 script = ExtResource("8_jh8sh")
+WalkState = NodePath("../walk")
+SprintState = NodePath("../sprint")
+BlockState = NodePath("../block")
+IdleState = NodePath("../idle")
+RollState = NodePath("../roll")
 
 [node name="roll" type="Node" parent="State_Manager" node_paths=PackedStringArray("RollCooldown", "Idle", "Sprint", "Walk", "Block", "Attack", "Roll")]
 script = ExtResource("9_efr3v")
