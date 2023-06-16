@@ -66,6 +66,7 @@ public partial class Roll : Move
         5 => new Vector2(-1, 0),
         6 => new Vector2(-1, 1),
         7 => new Vector2(0, -1),
-        8 => new Vector2(1, -1)
+        8 => new Vector2(1, -1),
+        _ => Vector2.Down
     };
 }
