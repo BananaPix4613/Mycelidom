@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://baj081m10bouu"]
 
-[ext_resource type="Script" path="res://Scenes/UIManager.gd" id="1_qrxqx"]
+[ext_resource type="Script" path="res://Scenes/UIManager.cs" id="1_5tjc0"]
 [ext_resource type="PackedScene" uid="uid://dvld48ki8j32u" path="res://Scenes/World.tscn" id="2_u1omh"]
 
 [sub_resource type="Shader" id="2"]
@@ -27,7 +27,7 @@ material = SubResource("3")
 offset_right = 480.0
 offset_bottom = 270.0
 mouse_filter = 2
-script = ExtResource("1_qrxqx")
+script = ExtResource("1_5tjc0")
 metadata/_edit_use_anchors_ = true
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
